@@ -1,6 +1,5 @@
 import { useAuthContext } from "@asgardeo/auth-react";
 import { Button } from "@mui/material";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Unauthenticated = () => {

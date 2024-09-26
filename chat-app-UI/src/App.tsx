@@ -1,4 +1,3 @@
-import React from "react";
 import { AuthProvider, useAuthContext } from "@asgardeo/auth-react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -57,7 +56,6 @@ const AppContent = () => {
         element={
           <ProtectedRoute>
             <ChatRoom
-              chatroomId={"Personal"}
               bearerAccessToken={token}
               nickname={email}
             />

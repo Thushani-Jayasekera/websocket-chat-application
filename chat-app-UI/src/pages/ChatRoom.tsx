@@ -1,7 +1,6 @@
-import React, { useState } from "react";
 import "./styles.css";
 import { Button, TextField, Box, Grid, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const SERVER =
   "wss://61fc25eb-66b2-4f09-8b21-68fee9e0e03f-prod.e1-us-east-azure.choreoapis.dev/mediationproject/nodechatapp/v1.0/";
@@ -26,16 +25,12 @@ interface ChatMessage {
 }
 
 const ChatRoom = ({
-  chatroomId,
   bearerAccessToken,
   nickname,
 }: {
-  chatroomId: string;
   bearerAccessToken: string;
   nickname: string;
 }) => {
-  const navigate = useNavigate();
-
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState<string>("");
   const [ws, setWs] = useState<WebSocket | null>(null);

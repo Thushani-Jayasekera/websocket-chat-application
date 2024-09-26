@@ -2,7 +2,6 @@ import { useAuthContext } from "@asgardeo/auth-react";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
 import { Button } from "@mui/material";
-import React from "react";
 
 const Home = () => {
   const { state, signIn, signOut } = useAuthContext();
