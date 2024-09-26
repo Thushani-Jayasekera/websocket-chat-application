@@ -11,7 +11,7 @@ import ChatRoom from "./pages/ChatRoom";
 const authConfig = {
   signInRedirectURL: "http://localhost:3000",
   signOutRedirectURL: "http://localhost:3000",
-  clientID: window.config.clientId,
+  clientID: "clientId",
   baseUrl: "https://api.asgardeo.io/t/thushaniprivate",
   scope: ["openid", "profile", "email"],
 };
