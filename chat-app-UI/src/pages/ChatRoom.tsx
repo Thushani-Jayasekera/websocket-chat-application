@@ -59,7 +59,7 @@ const ChatRoom = ({
     if (accessToken == undefined || accessToken == "") {
         window.location.reload();
     }
-    const socket = new WebSocket(`${SERVER}`, ["choreo-internal-API-Key", accessToken]);
+    const socket = new WebSocket(`${SERVER}`, ["choreo-oauth2-key", accessToken]);
     setWs(socket);
 
     socket.onopen = () => {
